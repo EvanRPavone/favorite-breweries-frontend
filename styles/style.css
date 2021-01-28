@@ -1,0 +1,188 @@
+body{
+    background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/beer-background-royalty-free-image-1608331890.");
+    background-color: #8D8D8D;
+}
+
+.card {
+    position: relative;
+    background: white;
+    box-shadow: 4px 4px 8px 0 #bd910f;
+    transition: 0.3s;
+    width: 32%;
+    margin-top: 20px;
+    font-family: "Times New Roman", Times, serif;
+  }
+  
+  .card-info {
+    padding: 3px 20px;
+  }
+  
+  .card-info h1 {
+    text-align: center;
+    text-shadow: 1px 1px #c99e1d;
+    padding-bottom: 5px;
+    border-bottom: 1px solid grey;
+  }
+
+  .card-info p {
+      text-align: center;
+  }
+
+  h3 {
+    text-align: center;
+  }
+  
+  .card-info ul {
+    list-style-type: circle;
+    padding: 10px;
+  }
+  
+  .card-info ul li {
+    margin-left: 20px;
+  }
+  
+  #main-title {
+    text-align: center;
+    color: #dedbd3;
+    font-size: 2.5em;
+    text-shadow: 3px 2px #f0c442;
+  }
+
+  #main-title a {
+    color: #FF4242;
+    -webkit-text-stroke: 1px black;
+    font-size: 3em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  
+  #brewery-card-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .form {
+    display: block;
+    text-align: center;
+  }
+  
+  #form-show-buttons {
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .button {
+    padding: 12px 24px;
+    border: 2px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  }
+  
+  .button:hover {
+    background-color: #FF4242;
+    color: white;
+  }
+
+  .remove-brewery {
+    padding: 1px 2px;
+    margin-top: 5px;
+    border: 2px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  }
+  
+  input[type=text] {
+    width: 30%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border-radius: 3px;
+    font-size: 1em;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  }
+  
+  label {
+    font-size: 1.2em;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    color: black;
+  }
+  
+  input[type=submit] {
+    background-color: #FF4242;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    font-size: 16px;
+    padding: 15px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+  }
+
+  input[type=submit]:hover {
+    background-color: #A70404;
+  }
+  
+  #or {
+    padding: 10px;
+    text-shadow: 1px 1px #b4b4b4;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 1.5em;
+  }
+  
+  #filter-drop-down {
+    text-align: center;
+  }
+  
+  .card-footer {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .card-footer a {
+    color: #b83d14;
+    font-family: helvetica;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .card-footer button {
+    padding: 1px 2px;
+    border: 2px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    float: right;
+    margin-right: 10px;
+  }
+
+  .card-footer button:hover {
+    background-color: #FF4242;
+    color: white;
+  }
+  
+  .card-footer a:hover {
+    color: black;
+  }
+  
+  .card-footer a:active {
+    color: black;
+  }

@@ -7,17 +7,9 @@
   </head>
   <body>
     <div class="container">
-      <h1 id="main-title">Favorite Breweries</h1>
+      <h1 id="main-title"><a href="#">Favorite Breweries</a></h1>
       <div id="form-show-buttons">
         <button class="button" id="add-brewery" type="button" name="button">Click here to add a brewery</button>
-        <span id="or"> or </span>
-        <button class="button" id="filter-button" type="button" name="button">Get a random brewery</button>
-      </div>
-      <div id="filter-drop-down" class="hidden">
-        <h3>Find your brewery</h3>
-        <select id="filter-dropdown">
-          <option value="" disabled selected>Select your beer...</option>
-        </select>
       </div>
       <div class="form">
         <form id="new-brewery-form" class="hidden">
@@ -28,7 +20,7 @@
           <label for="brewery-state">State</label><br>
           <input type="text" name="brewery-state"><br>
           <label for="favorites">Favorite Beers</label><br>
-          <input type="text" name="favorites" placeholder="Enter your favorite beers separated by a comma and a space..."><br>
+          <input type="text" name="favorites" placeholder="Separated by a comma and a space..."><br>
           <input id="form-submit" type="submit" value="Add Brewery">
         </form>
       </div>
