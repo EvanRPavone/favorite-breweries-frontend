@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <title>Favorite Breweries</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="main-title">Favorite Breweries</h1>
+      <div id="form-show-buttons">
+        <button class="button" id="add-brewery" type="button" name="button">Click here to add a brewery</button>
+        <span id="or"> or </span>
+        <button class="button" id="filter-button" type="button" name="button">Get a random brewery</button>
+      </div>
+      <div id="filter-drop-down" class="hidden">
+        <h3>Find your brewery</h3>
+        <select id="filter-dropdown">
+          <option value="" disabled selected>Select your beer...</option>
+        </select>
+      </div>
+      <div class="form">
+        <form id="new-brewery-form" class="hidden">
+          <label for="brewery-name">Name</label><br>
+          <input type="text" name="brewery-name"><br>
+          <label for="city">City</label><br>
+          <input type="text" name="city"><br>
+          <label for="brewery-state">State</label><br>
+          <input type="text" name="brewery-state"><br>
+          <label for="favorites">Favorite Beers</label><br>
+          <input type="text" name="favorites" placeholder="Enter your favorite beers separated by a comma and a space..."><br>
+          <input id="form-submit" type="submit" value="Add Brewery">
+        </form>
+      </div>
+      <div id="brewery-card-container">
+
+      </div>
+    </div>
+    <script type="application/javascript" src="src/components/brewery.js" charset="utf-8"></script>
+    <script type="application/javascript" src="src/components/breweries.js" charset="utf-8"></script>
+    <script type="application/javascript" src="src/components/favorites.js" charset="utf-8"></script>
+    <script type="application/javascript" src="src/components/app.js" charset="utf-8"></script>
+    <script type="application/javascript" src="src/adapters/BreweriesAdapter.js" charset="utf-8"></script>
+    <script type="application/javascript" src="src/adapters/FavoritesAdapter.js" charset="utf-8"></script>
+    <script type="application/javascript" src="src/index.js" charset="utf-8"></script>
+  </body>
+
+</html>
