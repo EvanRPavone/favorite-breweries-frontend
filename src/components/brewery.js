@@ -12,8 +12,11 @@ class Brewery {
         const cardInfo = document.createElement('div')
         cardInfo.className = "card-info"
         const name = document.createElement('h1')
-        name.innerHTML = this.title
+        name.innerHTML = this.name
         cardInfo.appendChild(name)
+        const cityState = document.createElement('p')
+        cityState.innerHTML = this.city + ', ' + this.state
+        cardInfo.appendChild(cityState)
         const favHeader = document.createElement('h3')
         favHeader.innerHTML = "Favorite Beers:"
         cardInfo.appendChild(favHeader)
@@ -26,12 +29,14 @@ class Brewery {
         cardInfo.appendChild(ul)
         const footer = document.createElement('div')
         footer.className = 'card-footer'
-        const city = document.createElement("p")
-        city.innerHTML = this.city
-        footer.appendChild(city)
-        const state = document.createElement("p")
-        state.innerHTML = this.state
-        footer.appendChild(state)
+        const deleteBtn = document.createElement('button')
+        deleteBtn.className = 'remove-brewery'
+        deleteBtn.innerHTML = 'Remove Brewery'
+        // const editBtn = document.createElement('button')
+        // editBtn.className = 'edit-brewery'
+        // editBtn.innerHTML = 'Edit Brewery'
+        footer.appendChild(deleteBtn)
+        // footer.appendChild(editBtn)
         card.appendChild(cardInfo)
         card.appendChild(footer)
         document.getElementById('brewery-card-container').appendChild(card)

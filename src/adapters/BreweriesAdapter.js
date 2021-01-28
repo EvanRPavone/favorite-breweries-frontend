@@ -16,4 +16,12 @@ class BreweriesAdapter {
     getBreweryByFavorite(favorite) {
         return fetch(this.baseURL + `/${favorite}`).then(response => response.json())
     }
+
+    removeBrewery(id) {
+        console.log(id, "This removes Brewery - in breweriesAdapter")
+        return fetch(`${this.baseURL}/${id}`, {
+            method: "DELETE"
+        })
+        .then(res => res.json())
+    }
 }
