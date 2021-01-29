@@ -1,4 +1,4 @@
-# favorite-breweries-frontend
+# Favorite Breweries Frontend
 A web application using javascript for the frontend and Rails API to manage the backend.
 
 # Backend API
