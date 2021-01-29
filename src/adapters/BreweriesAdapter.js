@@ -20,7 +20,7 @@ class BreweriesAdapter {
     removeBrewery() {
         const breweryId = data.attributes.id
         fetch (`${this.baseURL}/${breweryId}`, {
-            method: "DELETE"
+            method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
                 "Accept": "application/json"
