@@ -17,11 +17,10 @@ class BreweriesAdapter {
         return fetch(this.baseURL + `/${favorite}`).then(response => response.json())
     }
 
-    removeBrewery(id) {
-        console.log(id, "This removes Brewery - in breweriesAdapter")
-        return fetch(`${this.baseURL}/${id}`, {
-            method: "DELETE"
-        })
-        .then(res => res.json())
+    removeBreweryFromApi() {
+        // const getBreweryDiv = document.getElementById('brewery-card-container')
+        // const getRemoveBtn = document.getElementsByClassName('remove-brewery')
+        // brewery-card-container is the parentElement of remove-brewery?
+        
     }
 }
