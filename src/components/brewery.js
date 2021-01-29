@@ -41,4 +41,9 @@ class Brewery {
         card.appendChild(footer)
         document.getElementById('brewery-card-container').appendChild(card)
     }
+
+    removeBreweryCard(){
+        const card= document.getElementsByClassName("card")
+        card.remove()
+    }
 }

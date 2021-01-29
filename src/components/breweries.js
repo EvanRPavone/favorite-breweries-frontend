@@ -5,6 +5,7 @@ class Breweries {
       this.formSubmit = document.getElementById("form-submit");
       this.formButtons = document.getElementById("form-show-buttons");
       this.addBreweryButton = document.getElementById("add-brewery");
+      this.removeBreweryButton = document.getElementsByClassName("remove-brewery");
       this.cardContainer = document.getElementById('brewery-card-container');
       this.bindEventListeners();
       this.fetchAndLoadBreweries();
@@ -23,6 +24,9 @@ class Breweries {
         this.toggleForm();
         this.toggleButtons();
       }.bind(this))
+      this.removeBreweryButton.addEventListener("click", function() {
+        BreweriesAdapter.removeBrewery();
+      })
     }
   
     createArrayOfBreweryFavorites(favorites) {
@@ -69,7 +73,7 @@ class Breweries {
         this.toggleForm();
       }.bind(this))
     }
-  
+
     hideOrShowElement(element) {
       if (element.classList.contains("hidden")) {
         element.classList.remove("hidden");
@@ -89,11 +93,5 @@ class Breweries {
   
     clearBreweries() {
       this.cardContainer.innerHTML = "";
-    }
-
-    deleteBrewery() {
-        const breweryDiv = document.getElementsByClassName
-        const breweryDivId = this.parentElement.dataset.id
-
     }
 }
