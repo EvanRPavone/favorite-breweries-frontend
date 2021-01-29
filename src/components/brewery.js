@@ -1,9 +1,11 @@
 class Brewery {
-    constructor(name, city, state, favorites) {
+    constructor(id, name, city, state, favorites) {
+        this.id = id;
         this.name = name;
         this.city = city;
         this.state = state;
         this.favorites = favorites;
+        this.adapter = new BreweriesAdapter();
     }
 
     createBreweryCard() {
@@ -30,10 +32,16 @@ class Brewery {
         const footer = document.createElement('div')
         footer.className = 'card-footer'
         const deleteBtn = document.createElement('button')
-        deleteBtn.className = 'remove-brewery'
+        deleteBtn.id = 'remove-brewery'
         deleteBtn.innerHTML = 'Remove Brewery'
+        console.log(this.adapter)
+        // deleteBtn.addEventListener("click", function() {
+        //     this.adapter.getBreweries();
+        //     this.adapter.removeBrewery();
+        //     console.log("Hello")
+        // })
         const editBtn = document.createElement('button')
-        editBtn.className = 'edit-brewery'
+        editBtn.id = 'edit-brewery'
         editBtn.innerHTML = 'Edit Brewery'
         footer.appendChild(deleteBtn)
         footer.appendChild(editBtn)
@@ -46,4 +54,6 @@ class Brewery {
         const card= document.getElementsByClassName("card")
         card.remove()
     }
+
+
 }

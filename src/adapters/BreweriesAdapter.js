@@ -5,6 +5,7 @@ class BreweriesAdapter {
 
     getBreweries() {
         return fetch(this.baseURL).then(response => response.json()).then(json => json.data)
+        console.log("This is the data" + JSON.stringify(data))
     }
 
     postBreweryToApi(configurationObject) {
@@ -18,21 +19,25 @@ class BreweriesAdapter {
     }
 
     removeBrewery() {
-        const breweryName = data.attributes.name
-        fetch (`${this.baseURL}/${breweryName}`, {
+        console.log("Hello")
+        const breweryId = brewery.attributes.id
+        console.log("Hello fucker")
+        fetch (`${this.baseURL}/${breweryId}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
                 "Accept": "application/json"
             },
         })
+        Brewery.removeBreweryCard()
+        console.log("Hello Fucker you made it" + breweryId);
     }
 
-    // deleteBreweryFromApi(configurationObject) {
-    //     return fetch(this.baseURL, configurationObject)
-    //     .then(resp => resp.json())
-    //     .catch(error => console.log("Error: " + error))
-    // }
+    deleteBreweryFromApi(configurationObject) {
+        return fetch(this.baseURL, configurationObject)
+        .then(resp => resp.json())
+        .catch(error => console.log("Error: " + error))
+    }
 }
 
 // //   method: "DELETE",

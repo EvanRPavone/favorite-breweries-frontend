@@ -5,7 +5,8 @@ class Breweries {
       this.formSubmit = document.getElementById("form-submit");
       this.formButtons = document.getElementById("form-show-buttons");
       this.addBreweryButton = document.getElementById("add-brewery");
-      this.removeBreweryButton = document.getElementsByClassName("remove-brewery");
+      this.removeBreweryButton = document.getElementById("remove-brewery");
+      // this.editBreweryButton = document.getElementById("edit-brewery");
       this.cardContainer = document.getElementById('brewery-card-container');
       this.bindEventListeners();
       this.fetchAndLoadBreweries();
@@ -16,6 +17,7 @@ class Breweries {
     }
   
     bindEventListeners() {
+      const editBreweryButton = document.getElementById("edit-brewery");
       this.formSubmit.addEventListener("click", function() {
         event.preventDefault();
         this.addBrewery();
@@ -24,9 +26,16 @@ class Breweries {
         this.toggleForm();
         this.toggleButtons();
       }.bind(this))
-      this.removeBreweryButton.addEventListener("click", function() {
-        BreweriesAdapter.removeBrewery();
-      })
+      if (editBreweryButton) {
+        editBreweryButton.addEventListener("click",function() {
+          console.log("Edit")
+        }.bind(this))
+      }
+      // if (this.removeBreweryButton) {
+      //   this.removeBreweryButton.addEventListener("click", function() {
+      //     this.adapter.removeBrewery();
+      //   }.bind(this))
+      // }
     }
   
     createArrayOfBreweryFavorites(favorites) {
@@ -34,13 +43,15 @@ class Breweries {
       for (let favorite of favorites) {
         favoriteArray.push(favorite.name);
       }
+      console.log("favorite beer added to favoriteArray" + favoriteArray)
       return favoriteArray
     }
   
     createBreweries(breweries) {
       for (let brewery of breweries) {
         let favorites = this.createArrayOfBreweryFavorites(brewery.attributes.favorites)
-        this.breweries.push(new Brewery(brewery.attributes.name, brewery.attributes.city, brewery.attributes.state, favorites))
+        this.breweries.push(new Brewery(brewery.attributes.id, brewery.attributes.name, brewery.attributes.city, brewery.attributes.state, favorites))
+        console.log("createBreweries Function - adds brewery name, city, state and favorites")
       }
     }
   
