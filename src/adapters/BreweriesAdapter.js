@@ -18,24 +18,21 @@ class BreweriesAdapter {
     }
 
     removeBrewery() {
-        const breweryId = data.attributes.id
-        fetch (`${this.baseURL}/${breweryId}`, {
+        const breweryName = data.attributes.name
+        fetch (`${this.baseURL}/${breweryName}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
                 "Accept": "application/json"
             },
-            deleteBreweryFromApi(configurationObject).then(function(json) {
-                Brewery.removeBreweryCard();
-            })
         })
     }
 
-    deleteBreweryFromApi(configurationObject) {
-        return fetch(this.baseURL, configurationObject)
-        .then(resp => resp.json())
-        .catch(error => console.log("Error: " + error))
-    }
+    // deleteBreweryFromApi(configurationObject) {
+    //     return fetch(this.baseURL, configurationObject)
+    //     .then(resp => resp.json())
+    //     .catch(error => console.log("Error: " + error))
+    // }
 }
 
 // //   method: "DELETE",
