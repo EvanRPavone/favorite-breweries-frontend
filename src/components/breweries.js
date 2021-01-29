@@ -5,8 +5,6 @@ class Breweries {
       this.formSubmit = document.getElementById("form-submit");
       this.formButtons = document.getElementById("form-show-buttons");
       this.addBreweryButton = document.getElementById("add-brewery");
-      this.removeBreweryButton = document.getElementsByClassName('remove-brewery');
-      this.editBreweryButton = document.getElementById('edit-brewery');
       this.cardContainer = document.getElementById('brewery-card-container');
       this.bindEventListeners();
       this.fetchAndLoadBreweries();
@@ -93,19 +91,9 @@ class Breweries {
       this.cardContainer.innerHTML = "";
     }
 
-    deleteFunc(){
-        const that = this
-        this.removeBreweryButton.addEventListener("click", function() {
-            const theDivElement = this.parentElement
-            const theDivID = this.parentElement.id
-            that.adapter.removeBrewery(theDivID).then(() => {
-                if(theDivElement.parentElement.innerHTML !== "") {
-                    theDivElement.remove()
-                } else {
-                    theDivElement.parentElement.remove()
-                    theDivElement.remove()
-                }
-            })
-        })
+    deleteBrewery() {
+        const breweryDiv = document.getElementsByClassName
+        const breweryDivId = this.parentElement.dataset.id
+
     }
 }

@@ -32,11 +32,11 @@ class Brewery {
         const deleteBtn = document.createElement('button')
         deleteBtn.className = 'remove-brewery'
         deleteBtn.innerHTML = 'Remove Brewery'
-        // const editBtn = document.createElement('button')
-        // editBtn.className = 'edit-brewery'
-        // editBtn.innerHTML = 'Edit Brewery'
+        const editBtn = document.createElement('button')
+        editBtn.className = 'edit-brewery'
+        editBtn.innerHTML = 'Edit Brewery'
         footer.appendChild(deleteBtn)
-        // footer.appendChild(editBtn)
+        footer.appendChild(editBtn)
         card.appendChild(cardInfo)
         card.appendChild(footer)
         document.getElementById('brewery-card-container').appendChild(card)
