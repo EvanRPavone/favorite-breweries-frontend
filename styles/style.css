@@ -30,11 +30,13 @@ body{
 
   h3 {
     text-align: center;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
   }
   
   .card-info ul {
     list-style-type: circle;
-    padding: 10px;
+    padding-bottom: 50px;
   }
   
   .card-info ul li {
