@@ -1,5 +1,6 @@
 body{
     background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/beer-background-royalty-free-image-1608331890.");
+    background-repeat: inherit;
     background-color: #8D8D8D;
 }
 

@@ -10,9 +10,10 @@
       <h1 id="main-title"><a href="#">Favorite Breweries</a></h1>
       <div id="form-show-buttons">
         <button class="button" id="add-brewery" type="button" name="button">Click here to add a brewery</button>
+        <button class="button" id="remove-breweries" type="button" name="button">Clear All Breweries</button>
       </div>
       <div class="form">
-        <form id="new-brewery-form" class="hidden">
+        <form id="new-brewery-form" class="hidden" autocomplete="off">
           <label for="brewery-name">Name</label><br>
           <input type="text" name="brewery-name"><br>
           <label for="city">City</label><br>
@@ -28,12 +29,9 @@
 
       </div>
     </div>
+    <script type="application/javascript" src="src/components/app.js" charset="utf-8"></script>
     <script type="application/javascript" src="src/components/brewery.js" charset="utf-8"></script>
     <script type="application/javascript" src="src/components/breweries.js" charset="utf-8"></script>
-    <script type="application/javascript" src="src/components/favorites.js" charset="utf-8"></script>
-    <script type="application/javascript" src="src/components/app.js" charset="utf-8"></script>
-    <script type="application/javascript" src="src/adapters/BreweriesAdapter.js" charset="utf-8"></script>
-    <script type="application/javascript" src="src/adapters/FavoritesAdapter.js" charset="utf-8"></script>
     <script type="application/javascript" src="src/index.js" charset="utf-8"></script>
   </body>
 
