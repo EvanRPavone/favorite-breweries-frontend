@@ -1,7 +1,6 @@
 class Breweries {
     constructor() {
         this.breweries = [];
-        this.favorites = [];
         this.baseURL = "http://localhost:3000/breweries";
         this.favoritesURL = "http://localhost:3000/favorites"
         this.formSubmit = document.querySelector("#form-submit");
