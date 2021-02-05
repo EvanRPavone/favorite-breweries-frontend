@@ -12,6 +12,8 @@ body{
     width: 32%;
     margin-top: 20px;
     font-family: "Times New Roman", Times, serif;
+    border: 2px solid black;
+    border-radius: 4px;
   }
   
   .card-info {
@@ -70,8 +72,13 @@ body{
   }
   
   .form {
+    background: #FFECB2;
     display: block;
     text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 2px solid black;
+    border-radius: 4px;
   }
   
   #form-show-buttons {
@@ -88,6 +95,7 @@ body{
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    margin-bottom: 10px;
   }
   
   .button:hover {
